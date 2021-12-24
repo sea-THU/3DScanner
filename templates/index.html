@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='site.css')}}" />
+  
+    <title>AI Builder</title>
+  </head>
+  
+<body>
+  <header>
+    <h1> AI Builder </h1>
+    <p> 将身边的物体装进您的口袋里吧！ </p>
+  </header>
+
+  <div class="middle">
+    <main>
+      <p>
+      使用方法：请您围绕想重构的物体，拍摄一圈视频。
+      </p>
+      <form action="" method="post" enctype="multipart/form-data" novalidate>
+
+        <nav class="right">
+          <ul class>
+            <li class="{{submit_class}}"><input type="submit" name="submit" class="submit-text" value="Submit" /></li>
+            <li><a class="NO-CACHE" href="{{foreground}}" download="">Download</a></li>
+          </ul>
+        </nav>
+
+        <div class="row">
+          <div class="column">
+            <div>
+              <h3> 上传图片1 </h3>
+              <div>
+                <input type="file" name="image1" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+          
+            <div>
+              <h3> 上传图片2 </h3>
+              <div>
+                <input type="file" name="image2" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片3 </h3>
+              <div>
+                <input type="file" name="image3" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片4 </h3>
+              <div>
+                <input type="file" name="image4" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片5 </h3>
+              <div>
+                <input type="file" name="image5" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片6 </h3>
+              <div>
+                <input type="file" name="image6" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片7 </h3>
+              <div>
+                <input type="file" name="image7" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+            <div>
+              <h3> 上传图片8 </h3>
+              <div>
+                <input type="file" name="image8" accept="image/*" onchange="loadFile(event)">
+                <script>
+                  var loadFile = function (event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function () {
+                      URL.revokeObjectURL(output.src)
+                    }
+                  };
+                </script>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  {% assets "main_js" %}
+  <script src="{{ ASSET_URL }}"></script>
+  {% endassets %}
+
+</body>
+</html>
